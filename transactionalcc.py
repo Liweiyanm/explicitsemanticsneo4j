@@ -13,7 +13,7 @@ def executewithconsistencycheck(ccs, statement):
            tx.rollback()
            print 'Consistency Checks failed. Transaction rolled back\n', ccresults
            res = 1
-           break
+           break   #break as soon as one check fails. 
     
     if (res == 0):
         tx.commit()
